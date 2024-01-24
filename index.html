@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivå 2 Modul 1 - Oppgave</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button onclick="divExample('white', 'red', 65, 125)">Eksempel 1</button>
+    <br />
+    <button onclick="window.location.reload()">Nullstill</button>
+    <br />
+    <button onclick="divExample('red', 'blue', 85, 300)">Eksempel 2</button>
+
+    <div class="divChange" id="divToChange">
+        <h1 class="overskrift"></h1>
+    </div>
+
+    <script>
+        function divExample( color, bgcolor, width, height ) {
+            document.getElementById('divToChange').innerHTML = /*HTML*/`
+            <div style="align-items: center; color: ${ color }; background-color: ${ bgcolor }; width: ${ width }%; height: ${ height }px">
+                <h1 class="overskrift">Eksempel</h1>
+            </div>
+            `
+        }
+    </script>
+</body>
+</html>
